@@ -5,6 +5,7 @@ using calendar_events.Test;
 
 namespace calendar_events.Test.Test;
 
+[Trait("type", "unit")]
 [Collection("Sequential")]
 public class TestTestReq1
 {
@@ -15,10 +16,10 @@ public class TestTestReq1
     public void TestSucessTestEventFullConstructor(string title, string date, string description)
     {
         TestReq1 instance = new();
-        Action act = () => instance.TestEventFullConstructor(title, date, description);        
+        Action act = () => instance.TestEventFullConstructor(title, date, description);
         act.Should().NotThrow<System.FormatException>();
         act.Should().NotThrow<Xunit.Sdk.XunitException>();
-        act.Should().NotThrow<NotImplementedException>();        
+        act.Should().NotThrow<NotImplementedException>();
     }
 
     [Trait("Category", "1 - Criou testes para o TestEventFullConstructor.")]
@@ -32,7 +33,6 @@ public class TestTestReq1
         act.Should().Throw<System.FormatException>();
         act.Should().NotThrow<NotImplementedException>();
     }
-
 }
 public class TestTestReq12
 {
@@ -57,7 +57,7 @@ public class TestTestReq12
     {
         TestReq1 instance = new();
         Action act = () => instance.TestEventHalfConstructor(title, date);
-        act.Should().Throw<System.FormatException>();        
+        act.Should().Throw<System.FormatException>();
         act.Should().NotThrow<NotImplementedException>();
     }
 }
@@ -118,5 +118,4 @@ public class TestTestReq14
         act.Should().Throw<Xunit.Sdk.XunitException>();
         act.Should().NotThrow<NotImplementedException>();
     }
-
 }
