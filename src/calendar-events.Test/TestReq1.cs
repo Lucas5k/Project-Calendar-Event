@@ -8,33 +8,45 @@ namespace calendar_events.Test;
 public class TestReq1
 {
     [Theory(DisplayName = "Deve cadastrar um evento com o construtor completo")]
-    [InlineData()]
+    [InlineData("Aniversário", "30/08/1994", "Hoje é um dia feliz!")]
     public void TestEventFullConstructor(string title, string date, string description)
     {
-        throw new NotImplementedException();
+        Event instance = new(title, date, description);
+        DateTime convertToDatetime = DateTime.Parse(date);
+
+        instance.Title.Should().Be(title);
+        instance.EventDate.Should().Be(convertToDatetime);
+        instance.Description.Should().Be(description);
     }
 
     [Theory(DisplayName = "Deve cadastrar um evento com o construtor sem descrição")]
-    [InlineData()]
+    [InlineData("Aniversário", "30/08/1994")]
     public void TestEventHalfConstructor(string title, string date)
     {
-        throw new NotImplementedException();   
+        Event instance = new(title, date);
+        DateTime convertToDatetime = DateTime.Parse(date);
+
+        instance.Title.Should().Be(title);
+        instance.EventDate.Should().Be(convertToDatetime);
     }
 
     [Theory(DisplayName = "Deve atrasar a data de um evento corretamente")]
-    [InlineData()]
+    [InlineData("Aniversário", "2022-05-05", 20, "2022-05-05")]
     public void TestEventDelayDate(string title, string date, int days, string expected)
     {
         throw new NotImplementedException();
-        
     }
 
     [Theory(DisplayName = "Deve imprimir um evento corretamente")]
-    [InlineData()]    
+    [InlineData(
+        "Aniversário",
+        "2022-05-05",
+        "Uma festa onde cada um leva seu pudim!",
+        "normal",
+        "Evento = Aniversário\nDate = 05/05/2022\n"
+    )]
     public void TestPrintEvent(string title, string date, string description, string format, string expected)
     {
-        throw new NotImplementedException(); 
+        throw new NotImplementedException();
     }
-    
-    
 }

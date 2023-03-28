@@ -6,16 +6,18 @@ public class Event : IEvent
     public string? Title {get; set; }
     public DateTime EventDate {get; set; }
     public string? Description {get; set; }
-        
 
     public Event(string title, string date, string description)
     {
-        throw new NotImplementedException();
+        Title = title;
+        EventDate = DateTime.Parse(date);
+        Description = description;
     }
 
     public Event(string title, string date)
     {
-        throw new NotImplementedException();  
+        Title = title;
+        EventDate = DateTime.Parse(date);
     }
 
     public void DelayDate(int days)

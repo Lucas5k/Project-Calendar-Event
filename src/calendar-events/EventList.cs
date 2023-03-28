@@ -1,14 +1,14 @@
 ﻿namespace calendar_events;
 #pragma warning disable CS8602
 
-public class EventList
+public class EventList<T>
 {
     private class Node
     {
-        public <> Value;
+        public T Value;
         public Node? Next;
 
-        public Node(<> t)
+        public Node(T t)
         {
             Value = t;
             Next = null;
@@ -22,11 +22,11 @@ public class EventList
         Head = null;
     }
 
-    public void Add(<> input) 
+    public void Add(T input)
     {
         if (Head == null)
         {
-            Head = new Node(input);            
+            Head = new Node(input);
         }
         else
         {
@@ -34,7 +34,7 @@ public class EventList
             Node? lastNode = Head;
             while(lastNode.Next != null)   lastNode = lastNode.Next;
 
-            lastNode.Next = new Node(input);                        
+            lastNode.Next = new Node(input);
         }
     }
 
@@ -43,12 +43,10 @@ public class EventList
         Node? printNode = Head;
         while(printNode.Next != null)
         {
-            
         }
-        
     }
 
-    public Event Index(int index)
+    public T? Index(int index)
     {
         Node? searchNode = Head;
         for(int i = 0; i < index; i++)
@@ -68,12 +66,11 @@ public class EventList
 
     public int SearchByTitle(string title)
     {
-        throw new NotImplementedException();     
+        throw new NotImplementedException();
     }
 
     public int SearchByDate(string dateSearch)
     {
-        throw new NotImplementedException();   
+        throw new NotImplementedException();
     }
-    
 }
