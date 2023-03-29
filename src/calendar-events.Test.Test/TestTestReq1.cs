@@ -5,7 +5,6 @@ using calendar_events.Test;
 
 namespace calendar_events.Test.Test;
 
-[Trait("type", "unit")]
 [Collection("Sequential")]
 public class TestTestReq1
 {
@@ -63,6 +62,7 @@ public class TestTestReq12
 }
 public class TestTestReq13
 {
+    [Trait("type", "unit")]
     [Trait("Category", "3 - Criou testes para o TestEventDelayDate.")]
     [Theory(DisplayName = "TestEventDelayDate deve ser executado com sucesso com entradas corretas")]
     [InlineData("Festa do pudim", "2022-05-05", 20, "2022-05-25")]
