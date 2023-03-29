@@ -90,7 +90,6 @@ public class TestTestReq13
 }
 public class TestTestReq14
 {
-    [Trait("type", "unit")]
     [Trait("Category", "4 - Criou testes para o TestPrintEvent.")]
     [Theory(DisplayName = "TestPrintEvent deve ser executado com sucesso com entradas corretas")]
     [InlineData("Festa do pudim", "2022-05-05", "Uma festa onde cada um leva seu pudim!", "normal", "Evento = Festa do pudim\nDate = 05/05/2022\n")]

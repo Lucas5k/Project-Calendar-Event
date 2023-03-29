@@ -31,10 +31,14 @@ public class TestReq1
     }
 
     [Theory(DisplayName = "Deve atrasar a data de um evento corretamente")]
-    [InlineData("Aniversário", "2022-05-05", 20, "2022-05-05")]
+    [InlineData("Aniversário", "2022-05-05", 20, "2022-05-25")]
     public void TestEventDelayDate(string title, string date, int days, string expected)
     {
-        throw new NotImplementedException();
+        Event instance = new(title, date);
+        instance.DelayDate(days);
+
+        DateTime convertToDateTime = DateTime.Parse(expected);
+        instance.EventDate.Should().Be(convertToDateTime);
     }
 
     [Theory(DisplayName = "Deve imprimir um evento corretamente")]
@@ -47,6 +51,8 @@ public class TestReq1
     )]
     public void TestPrintEvent(string title, string date, string description, string format, string expected)
     {
-        throw new NotImplementedException();
+        Event instance = new(title, date, description);
+
+        instance.PrintEvent(format).Should().Be(expected);
     }
 }

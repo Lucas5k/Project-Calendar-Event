@@ -22,11 +22,19 @@ public class Event : IEvent
 
     public void DelayDate(int days)
     {
-        throw new NotImplementedException();
+        var duration =  new TimeSpan(days, 0, 0, 0);
+        EventDate = EventDate.Add(duration);
     }
 
     public string PrintEvent(string format)
     {
-        throw new NotImplementedException();      
+        if(format == "normal")
+        {
+            return $"Evento = {Title}\nDate = {EventDate.ToString("dd/MM/yyyy")}\n";
+        }
+        else
+        {
+            return $"Evento = {Title}\nDate = {EventDate.ToString("dd/MM/yyyy")}\nDescription = {Description}";
+        }
     }
 }
