@@ -76,7 +76,7 @@ public class EventList
         {
             searchTitle = searchTitle.Next;
 
-            index += 1;
+            index ++;
         }
 
         return index;
@@ -92,7 +92,7 @@ public class EventList
         {
             searchDate = searchDate.Next;
 
-            index += 1;
+            index ++;
         }
 
         return index;
