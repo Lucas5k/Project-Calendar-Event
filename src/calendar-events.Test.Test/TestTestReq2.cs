@@ -8,7 +8,6 @@ namespace calendar_events.Test.Test;
 [Collection("Sequential")]
 public class TestTestReq2
 {
-        [Trait("type", "unit")]
     [Trait("Category", "5 - Criou testes para o TestListSearchByTitle.")]
     [Theory(DisplayName = "TestListSearchByTitle deve ser executado com sucesso com entradas corretas")]
     [InlineData("Festa do pudim", "2022-05-05", "Uma festa onde cada um leva seu pudim!", 0)]
