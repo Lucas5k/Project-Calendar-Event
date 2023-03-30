@@ -47,9 +47,9 @@
               "resultFile": {
                 "uri": "file:///home/lucascabral/Documents/todos-projetos/Acelera%C3%A7%C3%A3o%20C%23/acc-csharp-011-project-calendar-events/src/calendar-events/EventList.cs",
                 "region": {
-                  "startLine": 54,
+                  "startLine": 56,
                   "startColumn": 16,
-                  "endLine": 54,
+                  "endLine": 56,
                   "endColumn": 26
                 }
               }
@@ -71,10 +71,58 @@
               "resultFile": {
                 "uri": "file:///home/lucascabral/Documents/todos-projetos/Acelera%C3%A7%C3%A3o%20C%23/acc-csharp-011-project-calendar-events/src/calendar-events/EventList.cs",
                 "region": {
-                  "startLine": 64,
+                  "startLine": 66,
                   "startColumn": 16,
-                  "endLine": 64,
+                  "endLine": 66,
                   "endColumn": 26
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1
+          }
+        },
+        {
+          "ruleId": "CS8602",
+          "level": "warning",
+          "message": "Dereference of a possibly null reference.",
+          "suppressionStates": [
+            "suppressedInSource"
+          ],
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///home/lucascabral/Documents/todos-projetos/Acelera%C3%A7%C3%A3o%20C%23/acc-csharp-011-project-calendar-events/src/calendar-events/EventList.cs",
+                "region": {
+                  "startLine": 75,
+                  "startColumn": 15,
+                  "endLine": 75,
+                  "endColumn": 26
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1
+          }
+        },
+        {
+          "ruleId": "CS8602",
+          "level": "warning",
+          "message": "Dereference of a possibly null reference.",
+          "suppressionStates": [
+            "suppressedInSource"
+          ],
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///home/lucascabral/Documents/todos-projetos/Acelera%C3%A7%C3%A3o%20C%23/acc-csharp-011-project-calendar-events/src/calendar-events/EventList.cs",
+                "region": {
+                  "startLine": 91,
+                  "startColumn": 15,
+                  "endLine": 91,
+                  "endColumn": 25
                 }
               }
             }
