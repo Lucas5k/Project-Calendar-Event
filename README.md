@@ -18,10 +18,10 @@ o framework FluentAssertion.
 Para rodar o repositório é necessário clonar o mesmo, dar o seguinte comando para iniciar o projeto:
 ```
 - Clone o repositório
-git clone git@github.com:Lucas5k/Project-Rent-Cars.git
+git clone git@github.com:Lucas5k/Project-Calendar-Event.git
 
 - Entre no arquivo do projeto
-cd Project-Rent-Cars
+cd Project-Calendar-Event
 
 - Usar o projeto
 cd src/
